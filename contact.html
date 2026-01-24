@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Phantom Cloud</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo-3d" id="logo3d">
+                    <span class="logo-text">Phantom Cloud</span>
+                </div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home" class="nav-link magnetic-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link magnetic-link">Services</a></li>
+                <li><a href="index.html#about" class="nav-link magnetic-link">About</a></li>
+                <li><a href="contact.html" class="nav-link magnetic-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Animated Background -->
+        <div class="background-animation">
+            <canvas id="liquidCanvas"></canvas>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="contact-header">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-subtitle">Let's bring your ideas to life</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container glass-card">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input glass-input" 
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input glass-input" 
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input glass-input" 
+                                placeholder="+91 XXXXX XXXXX"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" name="service" class="form-input glass-input" required>
+                                <option value="">Select a service</option>
+                                <option value="video-editing">Video Editing</option>
+                                <option value="banner-logo">Banner & Logo Design</option>
+                                <option value="social-media">Social Media Management</option>
+                                <option value="content-writing">Content & Script Writing</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="seo">SEO Campaign</option>
+                                <option value="development">Front & Back End Development</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget" class="form-input glass-input">
+                                <option value="">Select budget range</option>
+                                <option value="under-5k">Under ₹5,000</option>
+                                <option value="5k-15k">₹5,000 - ₹15,000</option>
+                                <option value="15k-30k">₹15,000 - ₹30,000</option>
+                                <option value="30k-50k">₹30,000 - ₹50,000</option>
+                                <option value="above-50k">Above ₹50,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-input glass-input" 
+                                rows="5" 
+                                placeholder="Tell us about your project..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary glass-btn form-submit-btn">
+                            <span>Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="info-card-large glass-card">
+                        <div class="info-icon-large">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Email Us</h3>
+                        <a href="mailto:officialphantomcloud@gmail.com" class="info-link">officialphantomcloud@gmail.com</a>
+                        <p class="info-description">We'll respond within 24 hours</p>
+                    </div>
+
+                    <div class="info-card-large glass-card">
+                        <div class="info-icon-large">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3>Call Us</h3>
+                        <a href="tel:+918128458345" class="info-link">+91 81284 58345</a>
+                        <p class="info-description">Mon - Sat, 10 AM - 8 PM IST</p>
+                    </div>
+
+                    <div class="info-card-large glass-card">
+                        <div class="info-icon-large">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p class="info-link">Surat, Gujarat</p>
+                        <p class="info-description">India</p>
+                    </div>
+
+                    <div class="info-card-large glass-card highlight-card">
+                        <h3>Why Choose Us?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Premium Quality Work
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Flexible Pricing
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Quick Turnaround
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                24/7 Support
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Phantom Cloud</h3>
+                    <p>Elevating digital experiences</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#about">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Phantom Cloud. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
