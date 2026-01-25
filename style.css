@@ -106,7 +106,7 @@ body {
 }
 
 .glass-btn:hover {
-    transform: translateY(-2px);
+    transform: translatey(-2px);
     box-shadow: 0 8px 24px rgba(31, 38, 135, 0.2);
     border-color: rgba(255, 255, 255, 0.5);
 }
@@ -509,7 +509,7 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-4px);
+    transform: translatey(-4px);
     box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
 }
 
@@ -717,6 +717,7 @@ body {
 /* ================================
    ABOUT SECTION
    ================================ */
+
 .about-section {
     padding: 120px 40px;
     background: var(--bg-secondary);
