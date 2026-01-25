@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 1,
                 y: 0,
                 scale: 1,
-                duration: 0.6,
+                duration: 0.15,
                 delay: index * 0.1,
                 ease: 'power3.out',
                 scrollTrigger: {
@@ -262,8 +262,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
+            const rotateX = (y - centerY) / 70;
+            const rotateY = (centerX - x) / 70;
             
             gsap.to(this, {
                 rotationX: rotateX,
@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 1,
                 y: 0,
                 scale: 1,
-                duration: 0.5,
+                duration: 0.15,
                 stagger: 0.15,
                 ease: 'power3.out',
                 scrollTrigger: {
@@ -548,27 +548,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // SMOOTH SCROLL TO ANCHOR LINKS
     // ================================
     
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     anchor.addEventListener('click', function(e) {
+    //         const href = this.getAttribute('href');
             
-            if (href !== '#' && href !== '') {
-                e.preventDefault();
-                const target = document.querySelector(href);
+    //         if (href !== '#' && href !== '') {
+    //             e.preventDefault();
+    //             const target = document.querySelector(href);
                 
-                if (target) {
-                    gsap.to(window, {
-                        scrollTo: {
-                            y: target,
-                            offsetY: 80
-                        },
-                        duration: 1,
-                        ease: 'power3.inOut'
-                    });
-                }
-            }
-        });
-    });
+    //             if (target) {
+    //                 gsap.to(window, {
+    //                     scrollTo: {
+    //                         y: target,
+    //                         offsetY: 80
+    //                     },
+    //                     duration: 1,
+    //                     ease: 'power3.inOut'
+    //                 });
+    //             }
+    //         }
+    //     });
+    // });
     
     // ================================
     // PAGE TRANSITION EFFECT
@@ -585,20 +585,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // CURSOR FOLLOWER (OPTIONAL)
     // ================================
     
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    cursor.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: rgba(102, 126, 234, 0.3);
-        pointer-events: none;
-        z-index: 9999;
-        mix-blend-mode: difference;
-        transition: transform 0.2s ease;
-        display: none;
-    `;
+    // const cursor = document.createElement('div');
+    // cursor.className = 'custom-cursor';
+    // cursor.style.cssText = `
+    //     position: fixed;
+    //     width: 20px;
+    //     height: 20px;
+    //     border-radius: 50%;
+    //     background: rgba(102, 126, 234, 0.3);
+    //     pointer-events: none;
+    //     z-index: 9999;
+    //     mix-blend-mode: difference;
+    //     transition: transform 0.2s ease;
+    //     display: none;
+    // `;
     
     // Only add cursor on desktop
     if (window.innerWidth > 1024) {
