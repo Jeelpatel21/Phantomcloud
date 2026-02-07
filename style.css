@@ -136,7 +136,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 5px 0;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -164,9 +164,18 @@ body {
     perspective: 1000px;
 }
 
+.logo-img {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
 .logo-3d {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.8rem;
-    font-weight: 800;
+    font-weight:800;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
